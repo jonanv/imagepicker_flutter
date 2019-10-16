@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Camera extends StatefulWidget {
     _Camera createState() => _Camera();
@@ -15,20 +16,32 @@ class _Camera extends State<Camera> {
                             children: <Widget>[
                                 GestureDetector(
                                     child: Text('Tomar fotografía'),
-                                    onTap: () {},
+                                    onTap: _openCamera,
                                 ),
                                 Padding(
                                     padding: EdgeInsets.all(8.0),
                                 ),
                                 GestureDetector(
                                     child: Text('Seleccionar de galería'),
-                                    onTap: () {},
+                                    onTap: _openGalery,
                                 )
                             ],
                         ),
                     ),
                 );
             }
+        );
+    }
+
+    void _openCamera() {
+        var picture = ImagePicker.pickImage(
+            source: ImageSource.camera,
+        );
+    }
+
+    void _openGalery() {
+        var picture = ImagePicker.pickImage(
+            source: ImageSource.gallery,
         );
     }
 
