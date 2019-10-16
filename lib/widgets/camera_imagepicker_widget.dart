@@ -23,7 +23,7 @@ class _Camera extends State<Camera> {
                                 ),
                                 GestureDetector(
                                     child: Text('Seleccionar de galería'),
-                                    onTap: _openGalery,
+                                    onTap: _openGallery,
                                 )
                             ],
                         ),
@@ -39,7 +39,7 @@ class _Camera extends State<Camera> {
         );
     }
 
-    void _openGalery() {
+    void _openGallery() {
         var picture = ImagePicker.pickImage(
             source: ImageSource.gallery,
         );
