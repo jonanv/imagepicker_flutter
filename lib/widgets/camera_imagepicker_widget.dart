@@ -21,7 +21,7 @@ class _Camera extends State<Camera> {
                                     padding: EdgeInsets.all(8.0),
                                 ),
                                 GestureDetector(
-                                    child: Text('Tomar fotografía'),
+                                    child: Text('Seleccionar de galería'),
                                     onTap: () {},
                                 )
                             ],
