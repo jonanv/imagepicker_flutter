@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Camera extends StatelessWidget {
+class Camera extends StatefulWidget {
+    _Camera createState() => _Camera();
+}
 
+class _Camera extends State<Camera> {
     Future<void> _optionsDialogBox() {
         return showDialog(
             context: context,
@@ -12,18 +15,14 @@ class Camera extends StatelessWidget {
                             children: <Widget>[
                                 GestureDetector(
                                     child: Text('Tomar fotografía'),
-                                    onTap: () {
-                                        
-                                    },
+                                    onTap: () {},
                                 ),
                                 Padding(
                                     padding: EdgeInsets.all(8.0),
                                 ),
                                 GestureDetector(
                                     child: Text('Tomar fotografía'),
-                                    onTap: () {
-
-                                    },
+                                    onTap: () {},
                                 )
                             ],
                         ),
@@ -42,7 +41,7 @@ class Camera extends StatelessWidget {
             body: Center(
                 child: RaisedButton(
                     child: Text('Click cámara'),
-                    onPressed: () {},
+                    onPressed: _optionsDialogBox,
                 ),
             ),
         );
